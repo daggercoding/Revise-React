@@ -1,0 +1,59 @@
+.app-Container
+{
+    display: flex;
+}
+.postContainer
+{
+ margin:15px;
+ padding: 10px;
+ box-shadow: 4px 7px 7px brown;
+}
+
+.content
+{
+    width: 100%;
+}
+.tags
+{
+    font-size: 10px;
+    background: #000000cc;
+    color: white;
+    font-weight: 500;
+    border-radius: 2px;
+    border-radius: 1px solid red;
+    margin:2px;
+
+}
+.user-form {
+    max-width: 400px;
+    margin: auto;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border-radius: 10px;
+  }
+  
+  .button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 60px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  
