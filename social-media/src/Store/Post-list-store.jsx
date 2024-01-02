@@ -13,6 +13,10 @@ function reducer(currPostList,action)
     {
         newPostList=currPostList.filter((post)=>post.id!==action.payload.id)
     }
+    else if(action.type==="ADD-POST")
+    {
+        newPostList=[action.payload,...currPostList]
+    }
     return newPostList;
 }
 
@@ -21,9 +25,20 @@ const PostListProvider = ({children})=>{
 
     const[postList,dispatchPostList]=useReducer(reducer,dummyData)
 
-    const addPost=()=>
+    const addPost=(id,title,img,discription,memories)=>
     {
-    //   dispatchPostList()
+    dispatchPostList(
+        {
+            type:"ADD-POST",
+            payload:{
+                id:Date.now(),
+                title:title,
+                discription:discription,
+                memories:memories,
+                img:img
+            }
+        }
+    )
     }
 
     const deletePost=(id)=>{
@@ -52,7 +67,7 @@ const dummyData=[
         title:"My Manali Trip",
         discription:"you can drink soo much bear there",
         memories:["gourav","akash","anas"],
-        img:"https://mygate.com/wp-content/uploads/2023/08/159.jpg"
+        img:"https://www.oyorooms.com/travel-guide/wp-content/uploads/2019/11/Top-4-Indian-skiing-destinations-Solang.webp"
 
         
     }
